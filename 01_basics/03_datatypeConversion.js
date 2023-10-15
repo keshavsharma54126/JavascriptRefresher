@@ -48,3 +48,84 @@ let numToString= String(num);
 console.log(numToString);
 console.log(typeof(numToString));
 
+
+//****************Operations******************* 
+
+let val = 3;
+let negValue = -val;
+console.log(negValue);
+
+//simple math operations
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2**2);
+console.log(2/3);
+console.log(2%3);
+
+//concatenation of string
+
+let str1 = 'hello';
+let str2 = ' Keshav'
+
+let str3 = str1+str2;
+console.log(str3);
+
+//now some miscelaneous thing of addition of numbers and strings
+
+console.log('1'+2);
+console.log(1+'2');
+console.log('1'+2+2);//if string first then all will be converted to string
+
+console.log(1+2+'2');//if number comes first then till string comes all will be treated as nubmer
+
+//bad practice
+console.log(+true);
+//console.log(true+);
+
+//something interesting assignment operator
+
+let num1,num2,num3;
+
+num1=num2=num3 = 2+3;
+
+let gameCounter =100;
+gameCounter++;
+console.log(gameCounter);
+++gameCounter;
+console.log(gameCounter);
+console.log(gameCounter++);
+console.log(gameCounter);
+
+//Comparison operators and how to compare datatypes in js
+//if you compare same datatypes then it will result in boollean result;
+console.log(3>1);
+console.log(3>=3);
+console.log(3==4);
+console.log(2!=1);
+
+//but in case of two differetn datatypes comparisons
+console.log('2'>1);
+console.log('02'>1);
+
+//some problematic comparisons
+
+console.log(null>0);
+console.log(null==0);
+console.log(null>=0);
+//incase of undefined  any comparison will always be false;
+
+console.log(undefined == 0);
+console.log(undefined >0);
+console.log(undefined < 0);
+
+//now there is string typecheck too === this will check the value and the datatype equality as well
+console.log('3' === 3);
+
+
+
+
+
+
+
+
