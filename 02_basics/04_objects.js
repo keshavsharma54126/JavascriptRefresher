@@ -52,3 +52,31 @@ console.log(Object.entries(tinderUser))//returns an array of arrays of all the k
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))//returns a boolean if the property is present or not
 
+
+const course = {
+    courseName : "js in hindi",
+    price : "999",
+    courseInstructor : "Keshav Sharma"
+}
+//course.courseInstructor  this is an old syntax but there is a new syntactical sugar in place of this
+
+const {courseInstructor: instructor} = course
+console.log(instructor)
+
+//destructoring while in react 
+// const navbar = ({company})=>{
+
+// }
+
+// navbar(company = "hitesh")
+
+//now some api's(api's are basically url/link which give you data in json(json is noting but object format) format) concept 
+//below is the json example
+// {
+//     "name": "Keshav",
+//     "coursename": "js in hindi",
+//     "price" : "free"
+// }
+
+//now apis can also give reswponse in array format like belo
+// like this [ {},{},{}]

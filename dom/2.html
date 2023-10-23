@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom | chai and code</title>
 </head>
-<body>
-    <div style="background-color: #212121;color: #ffff">
+<body style="background-color: #212121;color: #ffff">
+    <div class="parent">
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
     </div>
 </body>
+<script >
+    const parent = document.querySelector(".parent")//this will return a html elemtn list 
+
+    console.log(parent)
+    //accessing the children of the parent;
+    console.log(parent.children)//this will return a html list 
+    const child = parent.children//to get the children of the parent 
+    const children = [...child]//converting the html list and spreading it to an array
+    console.log(children[0].innerHTML)
+    //traversing the parent element
+    for(let i=0;i<children.length;i++){
+        console.log(children[i].innerHTML)
+    }
+    children[0].style.color="red";
+    console.log(parent.firstElementChild);//accessing the first element of the parent element
+     console.loog(parent.lastElementChild);//accessing the last element of the parent
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
+
+    //if we want to go to the parent from the child element
+    console.log(dayOne.parentElement)
+    //siblings also
+    console.log(dayOne.nextElementSibling)
+    //to get all the child nodes of a parent very important concep for react and react is made only by manuplating these chlid nodes
+    console.log(parent.childNodes)
+
+    
+
+</script>
 </html>
