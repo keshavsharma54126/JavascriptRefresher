@@ -155,3 +155,53 @@ function newGame() {
 
 
 ```
+## Project 5(Press a Key)
+
+```Javascript
+document.addEventListener('keydown', (e) => {
+  document.querySelector('.key').innerHTML = `<table>
+  <tr>
+    <th>Key</th>
+    <th>Key Code</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>`;
+});
+
+
+```
+
+##Project 6 (Changing Colors)
+
+```Javascript
+const hexString = '0123456789ABCDEF';
+
+let hexColor = () => {
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hexString[Math.floor(Math.random() * 16 + 1)];
+  }
+  return color;
+};
+
+let changeColor;
+
+document.querySelector('#start').addEventListener('click', (e) => {
+  if (changeColor == null) {
+    changeColor = setInterval(() => {
+      document.querySelector('body').style.background = hexColor();
+    }, 100);
+  }
+});
+
+document.querySelector('#stop').addEventListener('click', () => {
+  clearInterval(changeColor);
+  changeColor = null;
+});
+
+```
